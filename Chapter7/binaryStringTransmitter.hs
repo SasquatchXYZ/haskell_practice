@@ -1,4 +1,4 @@
-import Data.Char ( ord, chr )
+import Data.Char (chr, ord)
 
 type Bit = Int
 
@@ -7,7 +7,7 @@ type Bit = Int
 --                where weights = iterate (*2) 1
 
 bin2int :: [Bit] -> Int
-bin2int = foldr (\x y -> x + 2*y) 0
+bin2int = foldr (\x y -> x + 2 * y) 0
 
 int2bin :: Int -> [Bit]
 int2bin 0 = []
@@ -27,7 +27,7 @@ decode :: [Bit] -> String
 decode = map (chr . bin2int) . chop8
 
 transmit :: String -> String
-transmit = decode .channel . encode
+transmit = decode . channel . encode
 
 channel :: [Bit] -> [Bit]
 channel = id

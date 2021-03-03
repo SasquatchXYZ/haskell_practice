@@ -6,7 +6,7 @@ quadruple x = double (double x)
 
 -- Factorial of a positive integer
 factorial :: (Num a, Enum a) => a -> a
-factorial n = product [1..n]
+factorial n = product [1 .. n]
 
 -- Average of a list of numbers
 average :: Foldable t => t Int -> Int
