@@ -1,4 +1,4 @@
-import Data.Char
+import Data.Char ( ord, chr )
 
 type Bit = Int
 
